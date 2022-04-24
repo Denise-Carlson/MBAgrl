@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Riddler's Treasure Hunt</title>
+  </head>
+
+  <body>
+    <h1>Riddler's Quiz</h1>
+
+      <img src="https://img.uhdpaper.com/wallpaper/the-batman-2022-riddler-question-mark-842@1@f-phone-thumbnail.jpg?dl" height="300px" width="400px"/>
+
+    <h2>Help Batman Catch The Riddler and put him back in Arkham.</h2>
+
+        <h3> Rules of the Game </h3>
+        <ol>
+          <li>
+            Click on each ? to reveal  clues to catch the riddler</li>
+        <li>
+          If you click on a bomb you lose</li>
+          <li>
+            If you click on a bat symbol you win Riddler is back in Arkham
+          </li>
+        </ol>
+
+          <p id="counter"> Clicks: 4 </p>
+
+        <table>
+          <tr>
+            <td onclick="treasure(0)" id="0">?</td>
+            <td onclick="treasure(1)" id="1">?</td>
+            <td onclick="treasure(2)" id="2">?</td>
+          </tr>
+          <tr>
+            <td onclick="treasure(3)" id="3">?</td>
+            <td onclick="treasure(4)" id="4">?</td>
+            <td onclick="treasure(5)" id="5">?</td>
+          </tr>
+          <tr>
+            <td onclick="treasure(6)" id="6">?</td>
+            <td onclick="treasure(7)" id="7">?</td>
+            <td onclick="treasure(8)" id="8">?</td>
+          </tr>
+        </table>
+
+
+        <br/>
+
+        <button type="button" onclick="location.reload()">Restart Game</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <footer>&copy Skylar Au-Jurez Denise Carlson <a href="https://www.rataalada.com/" target="_blank"  > rataalada</a>
+          <a href="#top-page">Back to Top of Page</a>
+        </footer>
+
+<script type="text/javascript" src="treasurehunt.js"></script>
+
+  </body>
+
+</html>
+5:29
+const treasure = () =>{
+    var randomlocation = Math.floor(Math.random() * 9)
+    console.log(randomlocation)
+      var counter = 4;
+      console.log(counter)
+      counter = counter - 1;
+      document.getElementById("counter").innerHTML = counter
+        if(randomlocation === 0){
+        document.getElementById("0").innerHTML ="💣"
+      }else if (randomlocation === 1) {
+        document.getElementById("1").innerHTML = "🦇"
+      }else if (randomlocation === 2) {
+        document.getElementById("2").innerHTML = "🦇"
+      }else if (randomlocation === 3) {
+        document.getElementById("3").innerHTML = "💣"
+      }else if (randomlocation === 4) {
+        document.getElementById("4").innerHTML = "🚨"
+      }else if (randomlocation === 5) {
+        document.getElementById("5").innerHTML = "🚨"
+      }else if (randomlocation === 6) {
+        document.getElementById("6").innerHTML = "💣"
+      }else if (randomlocation === 7) {
+        document.getElementById("7").innerHTML = "🚨"
+      }else if (randomlocation === 8) {
+        document.getElementById("8").innerHTML = "🦇"
+        }
+    }
